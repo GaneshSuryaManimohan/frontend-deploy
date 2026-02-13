@@ -20,3 +20,7 @@ variable "common_tags" {
       Component   = "frontend"
     }
 }
+
+variable "app_version" {
+  type = string
+}

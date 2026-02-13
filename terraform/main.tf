@@ -31,7 +31,7 @@ resource "null_resource" "frontend_setup" {
   provisioner "remote-exec" {
     inline = [ 
       "chmod +x /tmp/frontend.sh", # make the script executable
-      "sudo bash /tmp/frontend.sh ${var.common_tags.Component} ${var.environment}" # execute the script with component and environment as arguments
+      "sudo bash /tmp/frontend.sh ${var.common_tags.Component} ${var.environment} ${var.app_version}" # execute the script with component and environment as arguments
      ]
   }
 }
